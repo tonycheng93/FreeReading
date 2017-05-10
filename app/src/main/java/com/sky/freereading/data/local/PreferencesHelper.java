@@ -6,11 +6,12 @@ import android.content.SharedPreferences;
 import com.sky.freereading.injection.ApplicationContext;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 /**
  * Created by tonycheng on 2017/5/10.
  */
-
+@Singleton
 public class PreferencesHelper {
 
     public static final String PREF_FILE_NAME = "free_reading_pref_file";

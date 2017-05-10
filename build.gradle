@@ -45,6 +45,10 @@ ext {
     dagger2Version = '2.5'
     /*timber*/
     timberVersion = '4.5.1'
+    /*jsoup*/
+    jsoupVersion = '1.10.2'
+    /*circleimageview*/
+    circleimageviewVersion = '2.1.0'
 }
 
 task clean(type: Delete) {

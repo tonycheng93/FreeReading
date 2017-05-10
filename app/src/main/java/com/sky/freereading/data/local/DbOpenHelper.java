@@ -4,6 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.sky.freereading.injection.ApplicationContext;
+
+import javax.inject.Inject;
 import javax.inject.Singleton;
 
 /**
@@ -15,7 +18,8 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "free_reading.db";
     private static final int DATABASE_VERSION = 1;
 
-    public DbOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    @Inject
+    public DbOpenHelper(@ApplicationContext Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
