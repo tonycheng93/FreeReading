@@ -1,0 +1,52 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    //SDK and tools
+    compileSdkVersion = '25'
+    buildToolsVersion = '25.0.2'
+    minSdkVersion = '15'
+    targetSdkVersion = '25'
+
+    //App dependencies
+    /* database*/
+    sqlbriteVersion = '1.1.1'
+    /*rxjava2*/
+    rxjava2Version = '2.1.0'
+    rxandroidVersion = '2.0.1'
+    /*retrofit2*/
+    retrofit2Version = '2.2.0'
+    /*glide*/
+    glideVersion = '3.8.0'
+    /*gson*/
+    gsonVersion = '2.8.0'
+    /*autovalue*/
+    autovalueVersion = '1.2'
+    autovaluegsonVersion = '0.4.6'
+    autovalueparcelVersion = '0.2.5'
+    /*dagger2*/
+    dagger2Version = '2.5'
+    /*timber*/
+    timberVersion = '4.5.1'
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

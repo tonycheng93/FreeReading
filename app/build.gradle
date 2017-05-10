@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        applicationId "com.sky.freereading"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    testCompile 'junit:junit:4.12'
+
+    //App dependencies
+    /*database*/
+    compile "com.squareup.sqlbrite:sqlbrite:$rootProject.ext.sqlbriteVersion"
+    /*rxjava*/
+    compile "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjava2Version"
+    compile "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroidVersion"
+    /*retrofit*/
+    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit2Version"
+    compile "com.squareup.retrofit2:retrofit-converters:$rootProject.ext.retrofit2Version"
+    compile "com.squareup.retrofit2:retrofit-adapters:$rootProject.ext.retrofit2Version"
+    /*glide*/
+    compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    /*gson*/
+    compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    /*autovalue*/
+    provided "com.google.auto.value:auto-value:$rootProject.ext.autovalueVersion"
+    annotationProcessor "com.google.auto.value:auto-value:$rootProject.ext.autovalueVersion"
+    annotationProcessor "com.ryanharter.auto.value:auto-value-gson:$rootProject.ext.autovaluegsonVersion"
+    provided "com.ryanharter.auto.value:auto-value-gson:$rootProject.ext.autovaluegsonVersion"
+    annotationProcessor "com.ryanharter.auto.value:auto-value-parcel:$rootProject.ext.autovalueparcelVersion"
+    /*dagger2*/
+    compile "com.google.dagger:dagger:$rootProject.ext.dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.dagger2Version"
+    /*timber*/
+    compile "com.jakewharton.timber:timber:$rootProject.ext.timberVersion"
+}
