@@ -29,6 +29,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     //App dependencies
+    /*recyclerview*/
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.recyclerviewVersion"
     /*database*/
     compile "com.squareup.sqlbrite:sqlbrite:$rootProject.ext.sqlbriteVersion"
     /*rxjava*/
