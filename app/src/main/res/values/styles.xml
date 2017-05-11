@@ -1,14 +1,6 @@
 <resources
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:ignore="SpUsage">
-
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="SpUsage">
 
     <style name="FreeReading"
            parent="Theme.AppCompat.Light.NoActionBar">
@@ -86,5 +78,62 @@
         <item name="android:textSize">20dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="Widget.FreeReading.MainPage.CategoryShowMore">
+        <item name="android:paddingStart">@dimen/category_margin_horizontal</item>
+        <item name="android:paddingEnd">@dimen/category_margin_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#EC4B61</item>
+    </style>
+
+    <style name="Widget.FreeReading.MainPage.Logo">
+        <item name="android:layout_width">@dimen/main_logo_size</item>
+        <item name="android:layout_height">@dimen/main_logo_size</item>
+    </style>
+
+    <style name="Widget.FreeReading.MainPage.NormalTab">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="Widget.FreeReading.MainPage.FAB">
+        <item name="android:layout_marginEnd">@dimen/fab_margin_right</item>
+        <item name="android:layout_marginBottom">@dimen/fab_margin_bottom</item>
+        <item name="android:clickable">true</item>
+        <item name="android:elevation"
+              tools:targetApi="lollipop">4dp
+        </item>
+        <item name="elevation">4dp</item>
+        <item name="borderWidth">0dp</item>
+    </style>
+
+    <style name="Widget.FreeReading.FeedIcon">
+        <item name="android:layout_margin">@dimen/normal_view_space</item>
+    </style>
+
+    <style name="Widget.FreeReading.CategoryName">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">11dp</item>
+        <item name="android:textColor">@color/textColorPrimaryHint</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Widget.FreeReading.FeedTime"
+           parent="Widget.FreeReading.CategoryName">
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+
+    <style name="Widget.FreeReading.FeedTitle">
+        <item name="android:layout_marginEnd">@dimen/normal_view_space</item>
+        <item name="android:paddingBottom">18dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">12</item>
+        <item name="android:textColor">@color/textColorPrimaryDark</item>
     </style>
 </resources>
