@@ -19,7 +19,7 @@ import com.google.gson.TypeAdapter;
 @AutoValue
 public abstract class Category implements Parcelable {
 
-    public abstract String title();//文章分类标题
+    public abstract String name();//文章分类标题
 
     public abstract String url();//文章分类地址
 
@@ -27,9 +27,9 @@ public abstract class Category implements Parcelable {
         return new AutoValue_Category.GsonTypeAdapter(gson);
     }
 
-    public static Category create(String title, String url) {
+    public static Category create(String name, String url) {
         return builder()
-                .title(title)
+                .name(name)
                 .url(url)
                 .build();
     }
@@ -41,7 +41,7 @@ public abstract class Category implements Parcelable {
 
     @AutoValue.Builder
     public abstract static class Builder {
-        public abstract Builder title(String title);
+        public abstract Builder name(String name);
 
         public abstract Builder url(String url);
 

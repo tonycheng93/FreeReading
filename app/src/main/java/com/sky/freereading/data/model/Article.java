@@ -10,7 +10,7 @@ import android.os.Parcelable;
  * Created by tonycheng on 2017/5/10.
  */
 @AutoValue
-public abstract class FreeReadingEntity implements Parcelable {
+public abstract class Article implements Parcelable {
 
     public abstract String avatar();
 
@@ -24,11 +24,11 @@ public abstract class FreeReadingEntity implements Parcelable {
 
     public abstract String nextPage();
 
-    public static TypeAdapter<FreeReadingEntity> typeAdapter(Gson gson) {
-        return new AutoValue_FreeReadingEntity.GsonTypeAdapter(gson);
+    public static TypeAdapter<Article> typeAdapter(Gson gson) {
+        return new AutoValue_Article.GsonTypeAdapter(gson);
     }
 
-    public static FreeReadingEntity create(String avatar, String author, String publishAt, String desc, String url, String nextPage) {
+    public static Article create(String avatar, String author, String publishAt, String desc, String url, String nextPage) {
         return builder()
                 .avatar(avatar)
                 .author(author)
@@ -40,7 +40,7 @@ public abstract class FreeReadingEntity implements Parcelable {
     }
 
     public static Builder builder() {
-        return new AutoValue_FreeReadingEntity.Builder();
+        return new AutoValue_Article.Builder();
     }
 
 
@@ -58,6 +58,6 @@ public abstract class FreeReadingEntity implements Parcelable {
 
         public abstract Builder nextPage(String nextPage);
 
-        public abstract FreeReadingEntity build();
+        public abstract Article build();
     }
 }
