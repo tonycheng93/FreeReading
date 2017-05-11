@@ -7,6 +7,7 @@ import com.squareup.sqlbrite.BriteDatabase;
 import com.squareup.sqlbrite.SqlBrite;
 
 import java.util.Collection;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -60,7 +61,7 @@ public class DatabaseHelper {
     }
 
     //由于目前 sqlbrite 还不支持 rxjava2 ，需要引入一个支持库
-//    public Flowable<List<Category>> getCategories() {
+    public Flowable<List<Category>> getCategories() {
 //        return mDb.createQuery(Db.CategoryTable.TABLE_NAME,
 //                "SELECT * FROM " + Db.CategoryTable.TABLE_NAME)
 //                .mapToList(new Func1<Cursor, Category>() {
@@ -69,5 +70,6 @@ public class DatabaseHelper {
 //                        return Db.CategoryTable.parseContentValues(cursor);
 //                    }
 //                });
-//    }
+        return null;
+    }
 }
