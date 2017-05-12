@@ -26,6 +26,8 @@ ext {
     targetSdkVersion = '25'
 
     //App dependencies
+    /*recyclerview*/
+    recyclerviewVersion = '25.3.1'
     /* database*/
     sqlbriteVersion = '1.1.1'
     /*rxjava2*/
